@@ -101,7 +101,6 @@ export default function Basket({ state, setState, removeFromCart }) {
             <p><b>Adres :</b> {adress}</p>
           </div>
           <div className="col-md-3 mt-5">
-            <div>
               <h5>Fiyat : </h5>
               <hr></hr>
               <p>KDV Tutarı : %20</p>
@@ -109,7 +108,6 @@ export default function Basket({ state, setState, removeFromCart }) {
               <p>KDV Dahil Fiyat :{Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378;  </p>
               <hr></hr>
               <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
-            </div>
           </div>
         </div>
       </div>

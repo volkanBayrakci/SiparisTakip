@@ -33,7 +33,9 @@ export default function Canvas({ state, setState, addToCart, removeFromCart, dec
               <hr></hr>
             </div>
           ))}
-          <button style={{ position: "absolute", bottom: "0", right: "0", borderRadius: "0", padding: "10px" }} type="button" className='btn btn-dark w-100' data-bs-dismiss="offcanvas" aria-label="Close"> <Link to="/basket" style={{ color: "#fff", textDecoration: "none" }}> Sipariş Özeti  </Link>  </button>
+          <Link to="/basket">
+          <button style={{ position: "absolute", bottom: "0", right: "0", borderRadius: "0", padding: "10px" }} type="button" className='btn btn-dark w-100' data-bs-dismiss="offcanvas" aria-label="Close">Sipariş Özeti </button>
+          </Link>
         </div>
       </div>
     </>
