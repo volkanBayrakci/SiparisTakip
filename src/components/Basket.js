@@ -49,13 +49,12 @@ export default function Basket({ state, setState, removeFromCart }) {
 
   return (
     <>
-
       <div className="container d-flex justify-content-end mt-5 mb-5 ">
         <button className="btn btn-success me-1" onClick={generatePDF}>PDF</button>
         <button className="btn btn-success me-1" onClick={onDownload}>Excel</button>
         <Test date={date} setDate={setDate} name={name} setName={setName} title={title} setTitle={setTitle} phone={phone} setPhone={setPhone} mail={mail} setMail={setMail} adress={adress} setAdress={setAdress} getDate={getDate} />
       </div>
-      <div ref={componentPDF} className="container">
+      {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{textAlign:"center" ,}}>Sepetinizde Ürün Yok :(</h2> :  <div ref={componentPDF} className="container">
         <div className="row mt-5">
           <div ref={componentEXCEL} className="col-md-12">
             <div className="table-responsive">
@@ -110,7 +109,8 @@ export default function Basket({ state, setState, removeFromCart }) {
               <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
           </div>
         </div>
-      </div>
+      </div> }
+     
     </>
   )
 }
