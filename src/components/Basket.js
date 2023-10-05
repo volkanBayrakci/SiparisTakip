@@ -54,7 +54,7 @@ export default function Basket({ state, setState, removeFromCart }) {
         <button className="btn btn-success me-1" onClick={onDownload}>Excel</button>
         <Test date={date} setDate={setDate} name={name} setName={setName} title={title} setTitle={setTitle} phone={phone} setPhone={setPhone} mail={mail} setMail={setMail} adress={adress} setAdress={setAdress} getDate={getDate} />
       </div>
-      {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{textAlign:"center" ,}}>Sepetinizde Ürün Yok :(</h2> :  <div ref={componentPDF} className="container">
+      {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{textAlign:"center" ,}}>Üzgünüz Sepetinizde Ürün Yok &#129402;</h2> :  <div ref={componentPDF} className="container">
         <div className="row mt-5">
           <div ref={componentEXCEL} className="col-md-12">
             <div className="table-responsive">

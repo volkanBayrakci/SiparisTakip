@@ -15,7 +15,7 @@ export default function Canvas({ state, setState, addToCart, removeFromCart, dec
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body" >
-          {state.cart.length === 0 ? <h5 style={{textAlign:"center" , marginTop:"50px"}}>Sepetinizde Ürün Yok :( </h5>  :      state.cart.map((item) => (
+          {state.cart.length === 0 ? <h5 style={{ textAlign: "center", marginTop: "50px" }}>Üzgünüz Sepetinizde Ürün Yok  &#129402; </h5> : state.cart.map((item) => (
             <div style={{ fontSize: "12px" }}>
               <p> Ürün Kodu :  {item.productCode} </p>
               <p> Ürün adı :{item.title} <b>({item.category})</b></p>
