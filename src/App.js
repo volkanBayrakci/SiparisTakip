@@ -23,6 +23,7 @@ function App() {
           cartItem.id === product.id
             ? { ...cartItem, count: Number(cartItem.count) + 1 }
             : cartItem
+
         )
         : [...state.cart, { ...product, count: 1 }]
     });
