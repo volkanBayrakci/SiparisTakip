@@ -12,6 +12,8 @@ export default function Basket({ state, setState, removeFromCart }) {
   const [phone, setPhone] = useState();
   const [mail, setMail] = useState();
   const [adress, setAdress] = useState();
+  const [note, setNote] = useState();
+  const [payment, setPayment] = useState(0);
 
 
 
@@ -52,7 +54,7 @@ export default function Basket({ state, setState, removeFromCart }) {
       <div className="container d-flex justify-content-end mt-5 mb-5 ">
         <button className="btn btn-success me-1" onClick={generatePDF}>PDF</button>
         <button className="btn btn-success me-1" onClick={onDownload}>Excel</button>
-        <Test date={date} setDate={setDate} name={name} setName={setName} title={title} setTitle={setTitle} phone={phone} setPhone={setPhone} mail={mail} setMail={setMail} adress={adress} setAdress={setAdress} getDate={getDate} />
+        <Test payment={payment} setPayment={setPayment} note={note} setNote={setNote} date={date} setDate={setDate} name={name} setName={setName} title={title} setTitle={setTitle} phone={phone} setPhone={setPhone} mail={mail} setMail={setMail} adress={adress} setAdress={setAdress} getDate={getDate} />
       </div>
       {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{textAlign:"center" ,}}>Üzgünüz Sepetinizde Ürün Yok &#129402;</h2> :  <div ref={componentPDF} className="container">
         <div className="row mt-5">
@@ -98,6 +100,10 @@ export default function Basket({ state, setState, removeFromCart }) {
             <p> <b>Telefon:</b>  {phone}</p>
             <p> <b> Mail :</b>{mail}</p>
             <p><b>Adres :</b> {adress}</p>
+            {
+              note === "" ? null : <p><b>Not :</b> {note}</p>
+            }
+            
           </div>
           <div className="col-md-3 mt-5">
               <h5>Fiyat : </h5>
@@ -107,6 +113,10 @@ export default function Basket({ state, setState, removeFromCart }) {
               <p>KDV Dahil Fiyat :{Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378;  </p>
               <hr></hr>
               <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
+              <hr></hr>
+              <p>Verilen Peşinat : {payment} &#8378; </p>
+              <hr></hr>
+              <p>Kalan Toplam Tutar : {totalCartAmount - payment} &#8378; </p>
           </div>
         </div>
       </div> }

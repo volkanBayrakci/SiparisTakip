@@ -27,7 +27,7 @@ function Product({ removeFromCart, search, setSearch, searchProduct, addToCart, 
                 {searchProduct.map((item) => (
                   <tr key={item.id}>
                     <td>{item.productCode}</td>
-                    <td>{item.title} {item.category === "" ? null  : <b> ({item.category}) </b>}</td>
+                    <td>{item.title}{item.category === "" ? null  : <b> ({item.category}) </b>}</td>
                     <td>{item.ML}</td>
                     <td>{item.price} &#8378; </td>
                     <td>
