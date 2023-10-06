@@ -12,7 +12,7 @@ export default function Basket({ state, setState, removeFromCart }) {
   const [phone, setPhone] = useState();
   const [mail, setMail] = useState();
   const [adress, setAdress] = useState();
-  const [note, setNote] = useState();
+  const [note, setNote] = useState("");
   const [payment, setPayment] = useState(0);
 
 
@@ -103,7 +103,6 @@ export default function Basket({ state, setState, removeFromCart }) {
             {
               note === "" ? null : <p><b>Not :</b> {note}</p>
             }
-            
           </div>
           <div className="col-md-3 mt-5">
               <h5>Fiyat : </h5>
@@ -120,7 +119,6 @@ export default function Basket({ state, setState, removeFromCart }) {
           </div>
         </div>
       </div> }
-     
     </>
   )
 }

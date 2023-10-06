@@ -11,7 +11,7 @@ export default function Canvas({ state, setState, addToCart, removeFromCart, dec
       <button style={{ padding: "0" }} class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <BsCart4 style={{ width: "26px", height: "26px" }} /> <span style={{ width: "22px", height: "22px", fontSize: "12px", fontWeight: "bold" }} class="d-flex align-items-center justify-content-center position-absolute top-0 start-100 translate-middle p-2 bg-light border border-light rounded-circle">{totalCount}</span> </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel"> Sepetim({totalCount}) </h5>
+          <h5 class="offcanvas-title" id="offcanvasRightLabel"> Sepetim({totalCount})</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body" >
