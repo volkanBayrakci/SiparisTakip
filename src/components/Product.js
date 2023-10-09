@@ -3,6 +3,7 @@ function Product({ removeFromCart, search, setSearch, searchProduct, addToCart, 
   return (
     <>
       <section className="product-list">
+
         <div className="container">
           <h1 className="text-center mt-4">Ürün Listesi</h1>
           <div className="my-3 input-group">

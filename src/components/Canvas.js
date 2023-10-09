@@ -26,7 +26,7 @@ export default function Canvas({ state, setState, addToCart, removeFromCart, dec
                 </span>
                 <button onClick={() => decreaseCount(item.id)} type="button" className="btn btn-outline-ligth">-</button>
                 <span onKeyUp={() => test(item)}>
-                  <input onChange={(e) => setCount(e.target.value)} style={{ width: "50px", textAlign: "center" }} type="text" />
+                  <input  onChange={(e) => setCount(e.target.value)} style={{ width: "50px", textAlign: "center" }} type="text" />
                 </span>
                 <button onClick={() => handleAddToCart(item)} type="button" className="btn btn-outline-ligth ">+</button>
               </div>

@@ -78,7 +78,7 @@ export default function Basket({ state, setState, removeFromCart }) {
                     state.cart.map(item => (
                       <tr>
                         <th scope="row"> {item.productCode} </th>
-                        <td>{item.title} <b>({item.category})</b></td>
+                        <td>{item.title}{item.category === "" ? null  : <b> ({item.category}) </b>}tem.title} <b>({item.category})</b></td>
                         <td> {item.count === 0 ? <button onClick={() => handleRemoveFromCart(item.id)} type="button" className="btn btn-light">Ürünü Sepetten Çıkarın</button> : item.count} </td>
                         <td> {item.price * item.count}  &#8378; </td>
                         {
