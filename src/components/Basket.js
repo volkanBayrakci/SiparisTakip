@@ -49,6 +49,8 @@ export default function Basket({ state, setState, removeFromCart }) {
     .reduce((total, item) => (total += item.count * item.price * 20 / 100), 0)
     .toFixed(0);
 
+  const totalCount = state.cart.reduce((toplam, cart) => toplam = toplam + Number(cart.count), 0)
+
   return (
     <>
       <div className="container d-flex justify-content-end mt-5 mb-5 ">
@@ -56,7 +58,7 @@ export default function Basket({ state, setState, removeFromCart }) {
         <button className="btn btn-success me-1" onClick={onDownload}>Excel</button>
         <Test payment={payment} setPayment={setPayment} note={note} setNote={setNote} date={date} setDate={setDate} name={name} setName={setName} title={title} setTitle={setTitle} phone={phone} setPhone={setPhone} mail={mail} setMail={setMail} adress={adress} setAdress={setAdress} getDate={getDate} />
       </div>
-      {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{textAlign:"center" ,}}>Üzgünüz Sepetinizde Ürün Yok &#129402;</h2> :  <div ref={componentPDF} className="container">
+      {state.cart.length === 0 ? <h2 className="pt-5 pb-5" style={{ textAlign: "center", }}>Üzgünüz Sepetinizde Ürün Yok &#129402;</h2> : <div ref={componentPDF} className="container">
         <div className="row mt-5">
           <div ref={componentEXCEL} className="col-md-12">
             <div className="table-responsive">
@@ -75,10 +77,10 @@ export default function Basket({ state, setState, removeFromCart }) {
                 </thead>
                 <tbody>
                   {
-                    state.cart.map(item => (  
+                    state.cart.map(item => (
                       <tr>
                         <th scope="row"> {item.productCode} </th>
-                        <td>{item.title}{item.category === "" ? null  : <b> ({item.category}) </b>}</td>
+                        <td>{item.title}{item.category === "" ? null : <b> ({item.category}) </b>}</td>
                         <td> {item.count === 0 ? <button onClick={() => handleRemoveFromCart(item.id)} type="button" className="btn btn-light">Ürünü Sepetten Çıkarın</button> : item.count} </td>
                         <td> {item.price * item.count}  &#8378; </td>
                         {
@@ -103,22 +105,24 @@ export default function Basket({ state, setState, removeFromCart }) {
             {
               note === "" ? null : <p><b>Not :</b> {note}</p>
             }
+            <p><b>Toplam Ürün Adeti :</b> {totalCount}</p>
           </div>
+
           <div className="col-md-3 mt-5">
-              <h5>Fiyat : </h5>
-              <hr></hr>
-              <p>KDV Tutarı : %20</p>
-              <hr></hr>
-              <p>KDV Dahil Fiyat :{Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378;  </p>
-              <hr></hr>
-              <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
-              <hr></hr>
-              <p>Verilen Peşinat : {payment} &#8378; </p>
-              <hr></hr>
-              <p>Kalan Toplam Tutar : {totalCartAmount - payment} &#8378; </p>
+            <h5>Fiyat : </h5>
+            <hr></hr>
+            <p>KDV Tutarı : %20</p>
+            <hr></hr>
+            <p>KDV Dahil Fiyat :{Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378;  </p>
+            <hr></hr>
+            <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
+            <hr></hr>
+            <p>Verilen Peşinat : {payment} &#8378; </p>
+            <hr></hr>
+            <p>Kalan Toplam Tutar : {totalCartAmount - payment} &#8378; </p>
           </div>
         </div>
-      </div> }
+      </div>}
     </>
   )
 }
