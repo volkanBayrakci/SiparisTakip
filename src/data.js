@@ -43,8 +43,8 @@ export const data = [
     id: 6,
     productCode: "NEO-0012",
     title: "Neopink ALOE VERA GEL / NEMLENDİRİCİ ALOE VERA JEL",
-    ML: "30 ML",
-    price: 650,
+    ML: "500ML",
+    price: 365,
     category: "KABİN"
   },
   {

@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState("")
   const [state, setState] = useState({
     productList: data,
-    cart: []
+    cart: [],
   })
 
   const addToCart = product =>

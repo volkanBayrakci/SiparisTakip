@@ -75,7 +75,7 @@ export default function Basket({ state, setState, removeFromCart }) {
                 </thead>
                 <tbody>
                   {
-                    state.cart.map(item => (
+                    state.cart.map(item => (  
                       <tr>
                         <th scope="row"> {item.productCode} </th>
                         <td>{item.title}{item.category === "" ? null  : <b> ({item.category}) </b>}</td>
