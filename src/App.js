@@ -62,8 +62,8 @@ function App() {
     return Object.keys(product).some((key) =>
       product[key]
         .toString()
-        .toLowerCase()
-        .includes(search.toString().toLowerCase())
+        .toLocaleLowerCase('TR')
+        .includes(search.toString().toLocaleLowerCase('TR'))
     );
   });
 
