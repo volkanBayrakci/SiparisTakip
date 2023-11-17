@@ -36,7 +36,7 @@ export const data = [
     productCode: "NEO-0011",
     title: "Neopink SUN LOTION 30++ SPF / GÜNEŞ KORUYUCU 30++ SPF",
     ML: "500 ML",
-    price: 365,
+    price: 440,
     category: "KABİN"
   },
   {

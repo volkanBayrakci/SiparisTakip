@@ -114,12 +114,12 @@ export default function Basket({ state, setState, removeFromCart }) {
             <p>KDV Tutarı : %20</p>
             <hr></hr>
             <p>KDV Dahil Fiyat :{Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378;  </p>
-            <hr></hr>
-            <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p>
+            {/* <hr></hr>
+            <p>KDV Hariç Fiyat : {totalCartAmount} &#8378; </p> */}
             <hr></hr>
             <p>Verilen Peşinat : {payment} &#8378; </p>
             <hr></hr>
-            <p>Kalan Toplam Tutar : {totalCartAmount - payment} &#8378; </p>
+            <p>Kalan Toplam Tutar : {Number(totalCartAmount) + Number(totalCartAmountKDV)} &#8378; </p>
           </div>
         </div>
       </div>}
