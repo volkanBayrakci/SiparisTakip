@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Test({ date, setDate, name, setName, title, setTitle, phone, setPhone, mail, setMail, adress, setAdress, getDate , note , setNote , payment , setPayment }) {
+export default function Test({ date, setDate, name, setName, title, setTitle, phone, setPhone, mail, setMail, adress, setAdress, getDate , note , setNote , payment , setPayment , taxNumber , setTaxNumber }) {
   return (
     <>
       <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -56,6 +56,11 @@ export default function Test({ date, setDate, name, setName, title, setTitle, ph
                   <label for="text" className="form-label">Peşinat</label>
                   <input value={payment}
                     onChange={(e) => setPayment(e.target.value)} type="text" className="form-control" id="payment" />
+                </div>
+                <div className="mb-1">
+                  <label for="TaxNumber" className="form-label">Vergi Dairesi Numarası</label>
+                  <input value={taxNumber}
+                    onChange={(e) => setTaxNumber(e.target.value)} type="number" className="form-control" id="TaxNumber" min="1" max="11" />
                 </div>
               </form>
             </div>
