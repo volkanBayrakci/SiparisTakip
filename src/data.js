@@ -360,6 +360,22 @@ export const data = [
     price: 320,
     category: ""
   },
+  {
+    id: 46,
+    productCode: "NEO-0024 ",
+    title: "NEOPİNK REGENATİNG REPAİRİNG CREAM ",
+    ML: "500 ML",
+    price: 490,
+    category: "KABİN"
+  },
+  {
+    id: 47,
+    productCode: "NEO-0025 ",
+    title: "NEOPİNK SENSİTİVE EXFOLATİNG JEL ",
+    ML: "500 ML",
+    price: 380,
+    category: "KABİN"
+  },
 
 ];
 
